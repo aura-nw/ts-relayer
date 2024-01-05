@@ -61,7 +61,7 @@ async function main() {
     const receipt = await client.upload(
       address,
       wasm,
-      'auto',
+      1.5,
       `Upload ${contract.name}`
     );
     console.debug(`Upload succeeded. Receipt: ${JSON.stringify(receipt)}`);

@@ -37,7 +37,7 @@ test.serial("set up channel with ics20 contract", async (t) => {
     codeIds.ics20,
     ics20Msg,
     "ICS",
-    "auto"
+    1.5
   );
   t.truthy(ics20Addr);
 
@@ -66,7 +66,7 @@ test.serial("send packets with ics20 contract", async (t) => {
     codeIds.cw20,
     initMsg,
     "CASH",
-    "auto"
+    1.5
   );
   t.truthy(cw20Addr);
   let bal = await balance(cosmwasm, cw20Addr);
@@ -88,7 +88,7 @@ test.serial("send packets with ics20 contract", async (t) => {
     codeIds.ics20,
     ics20Msg,
     "ICSX",
-    "auto"
+    1.5
   );
   t.truthy(ics20Addr);
 
@@ -116,7 +116,7 @@ test.serial("send packets with ics20 contract", async (t) => {
     cosmwasm.senderAddress,
     cw20Addr,
     sendMsg,
-    "auto",
+    1.5,
     "Send CW20 tokens via ICS20"
   );
 
